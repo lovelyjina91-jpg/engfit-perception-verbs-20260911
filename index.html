@@ -199,7 +199,7 @@ body.nocursor{cursor:none}
 const R={s:'주어',v:'지각동사',o:'목적어',b:'동사원형',ing:'-ing',pp:'p.p.',x:''};
 const fx=(from,to,extra='')=>`class="fx ${extra}"${from!=null?` data-from="${from}"`:''}${to!=null?` data-to="${to}"`:''}`;
 const ck=(t,r)=>`<span class="ck r-${r}">${t}</span>`;
-const hd=sec=>`<div class="hd"><div class="sec">${sec}</div><div class="logo"><b>영핏영어</b><span>YOUNG FIT</span></div></div>`;
+const hd=sec=>`<div class="hd"><div class="sec">${sec}</div><div class="logo"><b>영핏영어</b><span>EngFit</span></div></div>`;
 const sent=arr=>arr.map(([t,r])=>r?ck(t,r):t).join(' ');
 
 /* ---------- slide data ---------- */
