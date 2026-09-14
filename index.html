@@ -354,14 +354,14 @@ function rBuild(d){
  <div class="stack" style="min-height:120px">${tips}</div>`}
 
 function rBlank(d){
- const opts=d.opts.map((o,i)=>`<div class="opt delay ${i===d.ans?'good':'bad'}" data-lit="2"><i>${'①②③④'[i]}</i>${o}</div>`).join('');
+ const opts=d.opts.map((o,i)=>`<div class="opt ${i===d.ans?'good':'bad'}" data-lit="2"><i>${'①②③④'[i]}</i>${o}</div>`).join('');
  return `${hd(d.sec)}
  <div class="kr">${d.kr}</div>
- <div class="bsent"><span>${d.pre}</span><span class="blank"><span ${fx(null,1,'q delay-out')}>?</span><span ${fx(2,null,'a delay')}>${d.opts[d.ans]}</span></span><span>${d.post}</span></div>
+ <div class="bsent"><span>${d.pre}</span><span class="blank"><span ${fx(null,1,'q')}>?</span><span ${fx(2,null,'a')}>${d.opts[d.ans]}</span></span><span>${d.post}</span></div>
  <div ${fx(1,null,'opts')}>${opts}</div>
  <div class="stack" style="min-height:110px">
   <div ${fx(0,0,'prompt')}>빈칸에 뭐가 들어갈까? 🤔</div>
-  <div ${fx(2,2,'think')}>🤔 생각해 봐! <div class="track"><div class="fill"></div></div></div>
+  <div ${fx(1,1,'think')}>🤔 생각해 보고, 준비되면 클릭! 👆</div>
   <div ${fx(3,null,'tip final')}>${d.why}</div>
  </div>`}
 
